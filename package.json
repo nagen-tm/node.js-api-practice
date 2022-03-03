@@ -1,0 +1,13 @@
+{
+  "name": "node.js-api-practice",
+  "version": "1.0.0",
+  "description": "a collection of API calls",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "got": "^11.8.0"
+  }
+}
