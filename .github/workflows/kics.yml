@@ -24,7 +24,7 @@ jobs:
       uses: checkmarx/kics-action@v1.4
       with:
         # scanning serverless
-        path: test/samples/positive1.tf,test/samples/test.tf
+        path: test/samples/test.tf
         output_path: myResults
     # Display the results in json format
     - name: display kics results
