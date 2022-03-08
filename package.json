@@ -3,11 +3,20 @@
   "version": "1.0.0",
   "description": "a collection of API calls",
   "main": "src/index.js",
+  "scripts": {
+    "clean": "rm -rf ./serverless",
+    "deploy": "export SLS_DEBUG=* && npx serverless deploy --force",
+    "package": "export SLS_DEBUG=* && npx serverless package",
+    "remove": "export SLS_DEBUG=* && npm serverless remove"
+  },
   "repository": {
     "type": "git",
     "url": ""
   },
   "dependencies": {
     "got": "^11.8.0"
+  },
+  "devDependencies": {
+    "serverless": "^3.7.1"
   }
 }

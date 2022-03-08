@@ -1,0 +1,21 @@
+service: api-practice
+frameworkVersion: '1'
+useDotenv: true
+
+provider:
+  name: aws
+  region: us-est-2
+  stackTags: ${self:provider.tags}
+  tags:
+    'node:api': 'practice'
+
+package:
+  artifact: ${env:ARTIFACT}
+
+layers:
+  api-practice:
+    path: dist
+    description: lambda layer for practice
+    compatibleRuntimes:
+      -nodejs14.x
+    retain: true
