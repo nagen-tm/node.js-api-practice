@@ -17,6 +17,6 @@
     "got": "^11.8.0"
   },
   "devDependencies": {
-    "serverless": "^3.7.1"
+    "serverless": "^3.7.2"
   }
 }

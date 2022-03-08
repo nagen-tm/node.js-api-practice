@@ -1,21 +1,17 @@
 service: api-practice
-frameworkVersion: '1'
-useDotenv: true
+frameworkVersion: '3.7.2'
 
 provider:
   name: aws
-  region: us-est-2
+  region: us-east-2
   stackTags: ${self:provider.tags}
   tags:
     'node:api': 'practice'
 
-package:
-  artifact: ${env:ARTIFACT}
-
-layers:
-  api-practice:
-    path: dist
-    description: lambda layer for practice
-    compatibleRuntimes:
-      -nodejs14.x
-    retain: true
+functions:
+  githubTopic:
+    handler: src/index.githubTopic
+    events:
+      - http: 
+          path: /topic
+          method: get
