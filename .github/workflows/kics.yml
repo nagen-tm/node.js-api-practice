@@ -1,9 +1,7 @@
-    # This is a basic workflow to help you get started with Actions
 name: KICS
 
-# Controls when the workflow will run
+# Controls when the workflow will run and what triggers
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches:
       - main
@@ -17,22 +15,18 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  scan:
     runs-on: ubuntu-latest
-    
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    - run: mkdir -p myResults
     # Scan Iac with kics
     - name: run kics Scan
       uses: checkmarx/kics-action@v1.4
       with:
-        # scanning two directories: ./terraform/ ./cfn-templates/ plus a single file
-        path: '../../.serverless'
-        output_path: ../../myResults/
+        # scanning serverless
+        path: 'serverless'
+        output_path: myResults
     # Display the results in json format
     - name: display kics results
       run: |
