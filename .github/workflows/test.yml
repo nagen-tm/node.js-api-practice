@@ -1,14 +1,17 @@
 name: Test
 
 # Controls when the workflow will run and what triggers
-on: [pull_request]
+on:
+  pull_request:
+    branches:
+      - main
 
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
-  helloWorld:
+  build:
     runs-on: ubuntu-latest
-    name: Hello World Example
     steps:
       - name: Hello World
         uses: nagengtm/test-action@v1.1
