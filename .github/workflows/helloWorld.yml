@@ -17,5 +17,6 @@ jobs:
         uses: nagengtm/hello-world-github-action@v1.0
         with: 
           who-to-greet: 'Test Action'
-
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
 
