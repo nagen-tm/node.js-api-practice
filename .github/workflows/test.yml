@@ -31,3 +31,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Test Variable
         run: echo ${GITHUB_WORKSPACE}
+
+      - uses: nagengtm/test-action@v1.1
+        with: 
+          who-to-greet: 'Test Action'
+  
