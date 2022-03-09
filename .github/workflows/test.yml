@@ -1,4 +1,4 @@
-name: Test
+name: Hello World
 
 # Controls when the workflow will run and what triggers
 on:
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello World
-        uses: nagengtm/test-action@v1.1
+        uses: nagengtm/hello-world-github-action@v1.0
         with: 
           greet: 'Test Action'
 
