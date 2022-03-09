@@ -1,0 +1,17 @@
+service: api-practice
+frameworkVersion: '3.7.2'
+
+provider:
+  name: aws
+  region: us-east-2
+  stackTags: ${self:provider.tags}
+  tags:
+    'node:api': 'practice'
+
+functions:
+  githubTopic:
+    handler: src/index.githubTopic
+    events:
+      - http: 
+          path: /topic
+          method: get
