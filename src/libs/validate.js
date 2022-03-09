@@ -1,5 +1,5 @@
 /*
-    Desc:
+    Desc: validates the options set for each api
 */
 
 const _validate ={
