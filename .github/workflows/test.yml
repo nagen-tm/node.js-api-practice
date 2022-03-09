@@ -33,4 +33,4 @@ jobs:
         id: hello
         uses: nagengtm/test-action@v1.1
         with: 
-          who-to-greet: 'Test Action'
+          greet: 'Test Action'
