@@ -34,6 +34,3 @@ jobs:
         uses: nagengtm/test-action@v1.1
         with: 
           who-to-greet: 'Test Action'
-
-      - name: Output
-        run: echo 'Time: ${{ steps.hello.outputs.time }}'
