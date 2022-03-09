@@ -16,6 +16,6 @@ jobs:
       - name: Hello World
         uses: nagengtm/hello-world-github-action@v1.0
         with: 
-          greet: 'Test Action'
+          who-to-greet: 'Test Action'
 
 
