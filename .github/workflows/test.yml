@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Hello World
-        uses: ./
+        uses: nagengtm/test-action@v1.1
         with: 
           greet: 'Test Action'
 
